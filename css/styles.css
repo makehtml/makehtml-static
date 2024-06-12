@@ -1095,7 +1095,7 @@ blockquote {
 }
 
 .tickets__item {
-  padding: 0 1rem;
+  padding: 1rem 1rem .5rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: 1px solid var(--bs-border-color-translucent);
@@ -1121,10 +1121,10 @@ blockquote {
   top: -2.5rem;
   left: .5rem;
   padding: .125rem .5rem;
-  background-color: var(--secondary-color);
+  background-color: var(--bs-secondary-bg-subtle);
 }
 
-.tickets__item--new { background-color: var(--secondary-color); }
+.tickets__item--new { background-color: var(--bs-secondary-bg-subtle); }
 
 .tickets__details {
   color: var(--bs-border-color-translucent);
