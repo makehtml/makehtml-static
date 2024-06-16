@@ -1028,6 +1028,7 @@ blockquote {
    }
    .input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-control,
    .input-group>.form-floating:not(:first-child)>.form-control { border-radius: var(--bs-border-radius); }
+   .hero-section .form-control[type="text"] { font-size: 1.25rem; }
 }
 
 @media screen and (max-width: 991px) {
