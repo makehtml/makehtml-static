@@ -919,18 +919,14 @@ blockquote {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 0 0 200px 200px;
+  border-width: 0 0 100px 100px;
   border-color: transparent transparent var(--secondary-color) transparent;
   pointer-events: none;
 }
+@media (min-width: 768px) { .site-footer::after { border-width: 0 0 200px 200px; } }
 
-.site-footer-title {
-  color: var(--primary-color);
-}
-
-.site-footer .dropdown-menu {
-  padding: 0;
-}
+.site-footer-title { color: var(--primary-color); }
+.site-footer .dropdown-menu { padding: 0; }
 
 .site-footer .dropdown-item {
   color: var(--p-color);
@@ -1021,6 +1017,19 @@ blockquote {
 /*---------------------------------------
   RESPONSIVE STYLES
 -----------------------------------------*/
+@media screen and (max-width: 767px) {
+  .btn { white-space: wrap;}
+  .input-group>.form-control,
+  .input-group>.form-floating,
+  .input-group>.form-select { width: auto; }
+  .igt {
+    padding: .3rem !important;
+    border: none;
+   }
+   .input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-control,
+   .input-group>.form-floating:not(:first-child)>.form-control { border-radius: var(--bs-border-radius); }
+}
+
 @media screen and (max-width: 991px) {
   h1 { font-size: 48px; }
   h2 { font-size: 36px; }
