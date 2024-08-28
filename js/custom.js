@@ -1,4 +1,7 @@
-const isSticky = () => window.scrollY > 25;
+const NAVBAR_HEIGHT = 25;
+const SCROLLTO_TIME = 300;
+
+const isSticky = () => window.scrollY > NAVBAR_HEIGHT;
 const navbar = document.querySelector('.navbar');
 const makeSticky = () => {
   if (isSticky()) {
@@ -12,22 +15,22 @@ window.addEventListener('scroll', () => {
   makeSticky();
 });
 
+const scrollToDiv = (element, navHeight) => {
+  const offset = element.offset();
+  const offsetTop = offset.top;
+  const totalScroll = offsetTop - navHeight;
+
+  $('body,html').animate({
+    scrollTop: totalScroll
+  }, SCROLLTO_TIME);
+};
+
 
 (function ($) {
   // MENU
   $('.navbar-collapse a').on('click', () => {
     $(".navbar-collapse").collapse('hide');
   });
-
-  const scrollToDiv = (element, navHeight) => {
-    const offset = element.offset();
-    const offsetTop = offset.top;
-    const totalScroll = offsetTop - navHeight;
-
-    $('body,html').animate({
-      scrollTop: totalScroll
-    }, 300);
-  };
 
   const isScrollIntoView = (elem, index) => {
     const docViewTop = $(window).scrollTop();

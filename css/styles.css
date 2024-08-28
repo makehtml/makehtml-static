@@ -167,7 +167,7 @@ strong { font-weight: var(--font-weight-bold); }
   SECTION
 -----------------------------------------*/
 .section-padding {
-  padding-top: 100px;
+  padding-top: 155px;
   padding-bottom: 100px;
 }
 
@@ -318,13 +318,18 @@ strong { font-weight: var(--font-weight-bold); }
   display: block;
 }
 
-.navbar-brand span { font-family: var(--title-font-family); }
+.navbar-brand span {
+  font-family: var(--title-font-family);
+  margin-left: 1rem;
+}
 
 .navbar-expand-lg .navbar-nav .nav-link {
   border-radius: var(--border-radius-large);
   margin: 10px;
   padding: 10px;
 }
+
+.navbar-expand-lg .sub-nav .navbar-nav .nav-link { margin: 0 10px; }
 
 .navbar-nav .nav-link {
   display: inline-block;
@@ -618,12 +623,18 @@ a.custom-block:hover h5 {
   padding: 20px 35px;
 }
 
+.social-share-bg {
+  flex-wrap: wrap;
+  background-image: linear-gradient(0deg, var(--primary-color) 0%, #539aa6 80%, #80d0c700 100%);
+}
+
 .social-share .bi-bookmark {
   color: var(--white-color);
   font-size: var(--h5-font-size);
 }
 
 .social-share .bi-bookmark:hover { color: var(--secondary-color); }
+
 .bg-design { background-color: #00B0FF; }
 .bg-graphic { background-color: #00BFA6; }
 .bg-advertising { background-color: #F50057; }
@@ -999,7 +1010,7 @@ blockquote {
   border-radius: var(--border-radius-large);
   color: var(--white-color);
   font-size: var(--copyright-font-size);
-  display: block;
+  display: inline-block;
   margin-right: 10px;
   text-align: center;
   width: 35px;
