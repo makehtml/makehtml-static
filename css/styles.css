@@ -1011,7 +1011,7 @@ blockquote {
   color: var(--white-color);
   font-size: var(--copyright-font-size);
   display: inline-block;
-  margin-right: 10px;
+  margin-left: .5rem;
   text-align: center;
   width: 35px;
   height: 35px;
