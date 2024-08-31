@@ -766,17 +766,9 @@ blockquote {
   padding: 20px 0px 65px 145px;
 }
 
-.timeline-container .vertical-scrollable-timeline li:last-child {
-  padding-bottom: 0;
-}
-
-.timeline-container .vertical-scrollable-timeline li p {
-  line-height: 40px;
-}
-
-.timeline-container .vertical-scrollable-timeline li p:last-child {
-  margin-bottom: 0;
-}
+.timeline-container .vertical-scrollable-timeline li:last-child { padding-bottom: 0; }
+.timeline-container .vertical-scrollable-timeline li p { line-height: 1.6 }
+.timeline-container .vertical-scrollable-timeline li p:last-child { margin-bottom: 0; }
 
 .timeline-container .vertical-scrollable-timeline li .icon-holder {
   position: absolute;
@@ -1028,20 +1020,6 @@ blockquote {
 /*---------------------------------------
   RESPONSIVE STYLES
 -----------------------------------------*/
-@media screen and (max-width: 767px) {
-  .btn { white-space: wrap;}
-  .input-group>.form-control,
-  .input-group>.form-floating,
-  .input-group>.form-select { width: auto; }
-  .igt {
-    padding: .3rem !important;
-    border: none;
-   }
-   .input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-control,
-   .input-group>.form-floating:not(:first-child)>.form-control { border-radius: var(--bs-border-radius); }
-   .hero-section .form-control[type="text"] { font-size: 1.25rem; }
-}
-
 @media screen and (max-width: 991px) {
   h1 { font-size: 48px; }
   h2 { font-size: 36px; }
@@ -1101,6 +1079,28 @@ blockquote {
   .subscribe-form-wrap {
     padding-top: 30px;
     padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .btn { white-space: wrap;}
+  .input-group>.form-control,
+  .input-group>.form-floating,
+  .input-group>.form-select { width: auto; }
+  .igt {
+    padding: .3rem !important;
+    border: none;
+  }
+  .input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-control,
+  .input-group>.form-floating:not(:first-child)>.form-control { border-radius: var(--bs-border-radius); }
+  .hero-section .form-control[type="text"] { font-size: 1.25rem; }
+
+  .timeline-container .vertical-scrollable-timeline .list-progress { left: 22px; }
+  .timeline-container .vertical-scrollable-timeline li { padding-left: 80px; }
+  .timeline-container .vertical-scrollable-timeline li .icon-holder,
+  .timeline-container .vertical-scrollable-timeline li .icon-holder::before {
+    width: 52px;
+    height: 52px;
   }
 }
 
